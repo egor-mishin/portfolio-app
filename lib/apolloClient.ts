@@ -8,7 +8,7 @@ function createApolloClient() {
 	return new ApolloClient({
 		ssrMode: typeof window === 'undefined', // set to true for SSR
 		link: new HttpLink({
-			uri: 'http://localhost:1337/graphql',
+			uri: 'https://strapi-em.herokuapp.com/graphql',
 		}),
 		cache: new InMemoryCache(),
 	})

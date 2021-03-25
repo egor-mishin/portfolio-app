@@ -1,0 +1,16 @@
+.navBar {
+    width: 120px;
+    height: 100vh;
+    padding: 80px 40px;
+    background-color: var(--white-color);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    border-right: 2px solid var(--light-grey-color);
+}
+
+.socialLinks {
+
+}

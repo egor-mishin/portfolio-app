@@ -1,0 +1,10 @@
+.menu {
+
+}
+
+.menu nav{
+    display: none;
+}
+.menu .visible {
+    display: block;
+}

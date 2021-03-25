@@ -1,5 +1,9 @@
 module.exports = {
 	images: {
-		domains: ['localhost'],
+		domains: ['strapi-em.herokuapp.com'],
 	},
-};
+
+	env: {
+		apiUrl: 'my-strapi-em.herokuapp.com',
+	}
+}
