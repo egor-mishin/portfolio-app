@@ -10,12 +10,11 @@ type Props = {
 };
 
 const  LinkItem: FC<Props> = ({imageUrl,title, link}): JSX.Element => {
-    const apiUrl = 'https://strapi-em.herokuapp.com'
 
     return (
         <a href={link} >
             <img
-                src={apiUrl + imageUrl}
+                src={imageUrl}
                 alt={title}
                 height={30}
                 width={30}
