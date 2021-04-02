@@ -1,16 +1,28 @@
 .navBar {
-    width: 120px;
-    height: 100vh;
-    padding: 80px 40px;
-    background-color: var(--white-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 
-    position: fixed;
-    top: 0;
-    left: 0;
+	width: 120px;
+	height: 100vh;
+	padding: 40px 40px;
+	background-color: var(--white-color);
 
-    border-right: 2px solid var(--light-grey-color);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	border-right: 2px solid var(--light-grey-color);
 }
 
-.socialLinks {
+.navBar a {
+	transition: ease-in-out .5s;
+	display: block;
+}
 
+
+.navBar a:hover img, .navBar a:hover span, .navBar svg:hover path{
+	filter: var(--filter-color)
 }

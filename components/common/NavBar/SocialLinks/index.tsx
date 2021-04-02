@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { FC } from 'react'
 import css from '../index.module.css'
-import Image from 'next/image'
 import LinkItem from './LinkItem'
 
 type Props = {

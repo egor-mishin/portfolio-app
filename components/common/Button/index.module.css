@@ -1,0 +1,23 @@
+.regular {
+    font-size: 1.142rem;
+    padding: .7375em 1.675em;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: .5em;
+
+    color: var(--main-color);
+    font-family: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+}
+
+.regular:hover {
+    background: var(--main-color);
+    color: var(--light-grey-color);
+}
+
+.regular:focus {
+    outline: none;
+}
+

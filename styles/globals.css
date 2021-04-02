@@ -2,8 +2,8 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: var(--text-font) -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: var(--text-font);
+	overflow-x:hidden;
 }
 
 a {
@@ -19,20 +19,48 @@ a {
 	display: block;
 }
 
-/* Variables */
+img {
+	width: 100%;
+	height: auto;
+}
+
+h1, p{
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+}
+
+/* VARIABLES */
 
 :root {
 
-	/* Colors */
+	/* COLORS */
 
 	--main-color: #ec4646;
 	--secondary-color: #46466E;
 	--white-color: #fff;
 	--text-color: #272121;
 	--light-grey-color: #FCF9F9;
+	--filter-color: invert(34%) sepia(36%) saturate(2565%) hue-rotate(333deg) brightness(106%) contrast(86%);
 
-	/* Fonts */
+	/* FONTS */
 
 	--head-font: 'Ubuntu', sans-serif;
-	--text-font: 'Source Sans Pro', sans-serif;;
+	--text-font: 'Source Sans Pro', sans-serif;
+
+	font-size: .875em; /* 14px */
+}
+
+/* GENERAL */
+
+.container {
+	max-width: 90%;
+	width: 1170px;
+	padding: 0 1.071em;
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
 }

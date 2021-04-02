@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { FC } from 'react'
 import { useQuery } from '@apollo/client'
-import { MENU_QUERY, NAVBAR_QUERY } from '../../../pages/api/api'
+import { MENU_QUERY, NAVBAR_QUERY } from '../../../api/api'
 import Link from 'next/link'
 import css from './index.module.css'
 import Menu from './Menu'

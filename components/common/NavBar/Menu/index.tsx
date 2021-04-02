@@ -2,7 +2,7 @@ import * as React from 'react'
 import { FC, useState } from 'react'
 import Link from 'next/link'
 import css from './index.module.css'
-import { MENU_QUERY } from '../../../../pages/api/api'
+import { MENU_QUERY } from '../../../../api/api'
 import { useQuery } from '@apollo/client'
 
 
@@ -22,10 +22,10 @@ const Menu: FC<Props> = (): JSX.Element => {
 		<div className={css.menu}>
 			<a href="#" onClick={() => setIsOpen(!isOpen)}>
 				<svg
-					width="38"
-					height="20"
+					width="28"
+					height="25"
 					viewBox="0 0 38 20"
-					fill="black"
+					fill="#46466E"
 					xmlns="http://www.w3.org/2000/svg"
 				>
 					<path d="M36.7381 3.42393H2.10924C1.47205 3.42393 0.954979 2.8785 0.954979 2.20659C0.954979 1.53458 1.47214 0.989258 2.10924 0.989258H36.7381C37.3753 0.989258 37.8923 1.53468 37.8923 2.20659C37.8923 2.8785 37.3752 3.42393 36.7381 3.42393Z" />

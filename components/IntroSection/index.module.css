@@ -1,0 +1,28 @@
+.introSection {
+    padding-top: 12em;
+    background: linear-gradient(-8deg, white 35%, var(--light-grey-color) 0%);
+    padding-bottom: 13.714em;
+}
+
+.textBox {
+    width: 50.35em;
+}
+
+
+.textBox h1{
+    font-size: 4.285rem;
+    max-width: 11em;
+    line-height: 1.2;
+}
+
+
+.textBox p{
+    max-width: 40.357em;
+    margin: 2.857em 0;
+    line-height: 1.571em;
+
+}
+
+.textBox h1 strong{
+    color: var(--main-color);
+}

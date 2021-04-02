@@ -1,14 +1,11 @@
-import * as React from 'react';
-import {FC} from "react";
+import * as React from 'react'
+import { FC } from 'react'
+import css from './index.module.css'
 
-type Props = {
+type Props = {}
 
-};
-
-const  Button: FC<Props> = (): JSX.Element => {
-    return (
-        <>Button</>
-    )
+const Button: FC<Props> = ({ children }): JSX.Element => {
+	return <button className={css.regular}>{children}</button>
 }
 
-export default  Button
+export default Button
