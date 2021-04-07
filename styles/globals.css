@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: var(--text-font);
-	overflow-x:hidden;
+	overflow-x: hidden;
 }
 
 a {
@@ -24,7 +24,17 @@ img {
 	height: auto;
 }
 
-h1, p{
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+}
+
+section{
+	margin-top: 4.5em;
+}
+p {
 	margin: 0;
 	padding: 0;
 	line-height: 100%;
@@ -33,22 +43,22 @@ h1, p{
 /* VARIABLES */
 
 :root {
-
 	/* COLORS */
 
 	--main-color: #ec4646;
-	--secondary-color: #46466E;
+	--secondary-color: #46466e;
 	--white-color: #fff;
 	--text-color: #272121;
-	--light-grey-color: #FCF9F9;
-	--filter-color: invert(34%) sepia(36%) saturate(2565%) hue-rotate(333deg) brightness(106%) contrast(86%);
+	--light-grey-color: #fcf9f9;
+	--filter-color: invert(34%) sepia(36%) saturate(2565%) hue-rotate(333deg)
+		brightness(106%) contrast(86%);
 
 	/* FONTS */
 
 	--head-font: 'Ubuntu', sans-serif;
 	--text-font: 'Source Sans Pro', sans-serif;
 
-	font-size: .875em; /* 14px */
+	font-size: 0.875em; /* 14px */
 }
 
 /* GENERAL */

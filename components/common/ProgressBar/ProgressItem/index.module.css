@@ -1,0 +1,14 @@
+.progressItem {
+	margin-bottom: 1em;
+}
+
+.progressContainer {
+	background-color: #c4c4c4;
+	border-radius: 0.5rem;
+}
+
+.progress {
+	background-color: var(--main-color);
+	height: 5px;
+	border-radius: 1rem;
+}

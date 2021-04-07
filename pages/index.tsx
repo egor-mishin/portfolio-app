@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Layout from '../layouts'
-import IntroSection from "../components/IntroSection";
-import Skills from "../components/Skills";
-import Portfolio from "../components/Portfolio";
-import CurrentProject from "../components/CurrentProject";
-import Blog from "../components/Blog";
+import IntroSection from '../components/IntroSection'
+import Skills from '../components/Skills'
+import Portfolio from '../components/Portfolio'
+import CurrentProject from '../components/CurrentProject'
+import Blog from '../components/Blog'
 
 export default function Home() {
 	return (
@@ -16,8 +16,8 @@ export default function Home() {
 			</Head>
 
 			<Layout>
+				<IntroSection />
 				<main>
-					<IntroSection />
 					<Skills />
 					<Portfolio />
 					<CurrentProject />

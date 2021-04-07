@@ -1,7 +1,6 @@
 .introSection {
     padding-top: 12em;
-    background: linear-gradient(-8deg, white 35%, var(--light-grey-color) 0%);
-    padding-bottom: 13.714em;
+    background: linear-gradient(-5deg, white 16%, var(--light-grey-color) 0%);
 }
 
 .textBox {

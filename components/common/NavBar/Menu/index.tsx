@@ -4,6 +4,7 @@ import Link from 'next/link'
 import css from './index.module.css'
 import { MENU_QUERY } from '../../../../api/api'
 import { useQuery } from '@apollo/client'
+import Preloader from "../../Preloader";
 
 
 type Props = {}
@@ -14,7 +15,7 @@ const Menu: FC<Props> = (): JSX.Element => {
 	const { loading, error, data } = useQuery(MENU_QUERY)
 
 	if (error) return <div>Failed to load</div>
-	if (loading) return <div>Loading...</div>
+	if (loading) return <div><Preloader /></div>
 
 	const { menus } = data
 

@@ -1,14 +1,23 @@
-import * as React from 'react';
-import {FC} from "react";
+import * as React from 'react'
+import { FC } from 'react'
+import ProgressItem from './ProgressItem'
 
 type Props = {
-
-};
-
-const  ProgressBar: FC<Props> = (): JSX.Element => {
-    return (
-        <>ProgressBar</>
-    )
+	skillBoxes: Array<{ title: string, percent: number }>
 }
 
-export default  ProgressBar
+const ProgressBar: FC<Props> = ({ skillBoxes }): JSX.Element => {
+	return (
+		<div>
+			{skillBoxes.map((box) => (
+				<ProgressItem
+					width={100}
+					percent={box.percent}
+					title={box.title}
+				/>
+			))}
+		</div>
+	)
+}
+
+export default ProgressBar

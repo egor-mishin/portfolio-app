@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown'
 import css from './index.module.css'
 import Image from 'next/image'
 import Button from '../common/Button'
+import Preloader from "../common/Preloader";
 
 type Props = {}
 
@@ -13,7 +14,7 @@ const IntroSection: FC<Props> = (): JSX.Element => {
 	const { loading, error, data } = useQuery(INTRO_SECTION_QUERY)
 
 	if (error) return <div>Failed to load</div>
-	if (loading) return <div>Loading...</div>
+	if (loading) return <div><Preloader /></div>
 
 	const { homePage } = data
 
