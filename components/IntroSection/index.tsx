@@ -4,7 +4,6 @@ import { useQuery } from '@apollo/client'
 import { INTRO_SECTION_QUERY } from '../../api/api'
 import ReactMarkdown from 'react-markdown'
 import css from './index.module.css'
-import Image from 'next/image'
 import Button from '../common/Button'
 import Preloader from "../common/Preloader";
 
@@ -33,12 +32,11 @@ const IntroSection: FC<Props> = (): JSX.Element => {
 				</div>
 
 				<div className={css.avatar}>
-					<Image
+					<img
 						src={homePage.introSection.image.url}
 						alt="Picture of the author"
-						width={372}
-						height={447}
-						layout="intrinsic"
+						width='372px'
+						height='447px'
 					/>
 				</div>
 			</div>
