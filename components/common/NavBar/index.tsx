@@ -6,12 +6,12 @@ import css from './index.module.css'
 import Menu from './Menu'
 import SocialLinks from './SocialLinks'
 import MailIcon from './MailIcon'
-import { NavBar } from "../../../api/types";
+import { NavBarType } from "../../../api/types";
 
 type Props = {}
 
 const NavBar: FC<Props> = (): JSX.Element => {
-	const { loading, error, data } = useQuery<NavBar>(NAVBAR_QUERY)
+	const { loading, error, data } = useQuery<NavBarType>(NAVBAR_QUERY)
 
 	if (error) return <div>Failed to load</div>
 	if (loading) return <div></div>

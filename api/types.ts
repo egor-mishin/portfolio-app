@@ -1,4 +1,4 @@
-export type Menu = {
+export type MenuType = {
 	menus: MenuItem[]
 }
 
@@ -7,7 +7,7 @@ type MenuItem = {
 	url: string
 }
 
-export type NavBar = {
+export type NavBarType = {
 	navBar: {
 		socialLinks: SocialLink[]
 	}
@@ -19,7 +19,7 @@ export type SocialLink = {
 	url: string
 }
 
-export type HomePage = {
+export type HomePageType = {
 	homePage: IntroSection
 }
 
@@ -31,7 +31,7 @@ type IntroSection = {
 	}
 }
 
-export type Skills = {
+export type SkillsType = {
   skillItems: SkillItem[]
 }
 

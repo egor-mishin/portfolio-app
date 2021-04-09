@@ -5,13 +5,13 @@ import { INTRO_SECTION_QUERY } from '../../api/api'
 import ReactMarkdown from 'react-markdown'
 import css from './index.module.css'
 import Button from '../common/Button'
-import { HomePage } from "../../api/types";
+import { HomePageType } from "../../api/types";
 
 
 type Props = {}
 
 const IntroSection: FC<Props> = (): JSX.Element => {
-	const { loading, error, data } = useQuery<HomePage>(INTRO_SECTION_QUERY)
+	const { loading, error, data } = useQuery<HomePageType>(INTRO_SECTION_QUERY)
 
 	if (error) return <div>Failed to load</div>
 	if (loading) return <div></div>
