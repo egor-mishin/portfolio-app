@@ -1,4 +1,4 @@
-import {gql} from '@apollo/client/core'
+import { gql } from '@apollo/client/core'
 
 export const MENU_QUERY = gql`
 	query {
@@ -13,6 +13,7 @@ export const NAVBAR_QUERY = gql`
 	query {
 		navBar {
 			socialLinks {
+			  title
 				icon {
 					url
 				}
@@ -36,21 +37,21 @@ export const INTRO_SECTION_QUERY = gql`
 `
 export const SKILLS_SECTION_QUERY = gql`
 	query {
-        skillItems {
-                    title
-                    iconsSection {
-                        title
-                        iconItems {
-                            title
-                            icon{
-                                url
-                            }
-                        }
-                    }
-                    skillBoxes{
-                        title
-                        percent
-                    }
-                }
-}
+		skillItems(sort: "id") {
+			title
+			iconsSection {
+				title
+				iconItems {
+					title
+					icon {
+						url
+					}
+				}
+			}
+			skillBoxes {
+				title
+				percent
+			}
+		}
+	}
 `

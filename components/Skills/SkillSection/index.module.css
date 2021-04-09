@@ -1,0 +1,13 @@
+.title{
+    font-family: var(--head-font);
+    color: rgba(199, 199, 211, .5);
+    font-size: 5.071rem;
+    text-transform: uppercase;
+    letter-spacing: .24em;
+    font-weight: 700;
+    margin-bottom: .6em;
+}
+
+.skillSection {
+    margin-top: 5.8em;
+}

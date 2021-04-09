@@ -1,20 +1,20 @@
 import * as React from 'react'
 import { FC } from 'react'
 import { useQuery } from '@apollo/client'
-import { MENU_QUERY, NAVBAR_QUERY } from '../../../api/api'
-import Link from 'next/link'
+import { NAVBAR_QUERY } from '../../../api/api'
 import css from './index.module.css'
 import Menu from './Menu'
 import SocialLinks from './SocialLinks'
 import MailIcon from './MailIcon'
+import { NavBar } from "../../../api/types";
 
 type Props = {}
 
 const NavBar: FC<Props> = (): JSX.Element => {
-	const { loading, error, data } = useQuery(NAVBAR_QUERY)
+	const { loading, error, data } = useQuery<NavBar>(NAVBAR_QUERY)
 
 	if (error) return <div>Failed to load</div>
-	if (loading) return <div>Loading...</div>
+	if (loading) return <div></div>
 
 	return (
 		<div className={css.navBar}>
