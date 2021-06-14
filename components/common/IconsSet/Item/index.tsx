@@ -1,14 +1,21 @@
-import * as React from 'react';
-import {FC} from "react";
+import * as React from 'react'
+import { FC } from 'react'
+import css  from './index.module.css'
 
 type Props = {
-
-};
-
-const  Item: FC<Props> = (): JSX.Element => {
-    return (
-        <>Item</>
-    )
+	title: string
+	imgUrl: string
 }
 
-export default  Item
+export const Item: FC<Props> = ({ title, imgUrl }): JSX.Element => {
+	return (
+    <div className={css.iconItem}>
+      <img
+        src={imgUrl}
+        alt={title}
+      />
+      <h4 className={css.iconTitle}>{title}</h4>
+    </div>
+    )
+
+}

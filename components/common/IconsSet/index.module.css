@@ -1,7 +1,12 @@
-.iconSet {
+.iconsSet {
 
 }
 
-.title{
+.iconsSetTitle{
+    margin-bottom: .85em;
+    font-size: 1.714rem;
+}
 
+.iconItems{
+    display: flex;
 }

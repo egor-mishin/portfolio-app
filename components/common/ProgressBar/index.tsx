@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { FC } from 'react'
 import ProgressItem from './ProgressItem'
+import css from './ProgressItem/index.module.css'
 
 type Props = {
 	skillBoxes: Array<{ title: string, percent: number }>
@@ -8,7 +9,7 @@ type Props = {
 
 const ProgressBar: FC<Props> = ({ skillBoxes }): JSX.Element => {
 	return (
-		<div>
+		<div className={css.skillBox}>
 			{skillBoxes.map((box) => (
 				<ProgressItem
 					width={100}

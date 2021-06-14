@@ -1,5 +1,10 @@
 .progressItem {
-	margin-bottom: 1em;
+	margin-bottom: 2em;
+}
+
+.progressItemTitle{
+	font-size: 1.28rem;
+	margin-bottom: .3em;
 }
 
 .progressContainer {
@@ -11,4 +16,25 @@
 	background-color: var(--main-color);
 	height: 5px;
 	border-radius: 1rem;
+}
+
+.percent {
+	margin-right: -1.5em;
+	margin-bottom: .3em;
+	font-size: 1.5rem;
+	font-weight: 900;
+}
+
+.percent sup {
+	margin-left: .1em;
+}
+
+.skillBox {
+	width: 60%;
+	margin-right: 8.3em;
+}
+
+.textBox{
+	display: flex;
+	justify-content: space-between;
 }

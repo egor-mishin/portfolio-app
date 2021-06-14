@@ -13,8 +13,11 @@ const ProgressItem: FC<Props> = ({ width, percent, title }): JSX.Element => {
 
     return (
         <div className={css.progressItem}>
-            <h4>{title}</h4>
-            <div className={css.progressContainer} style={{ width: `${width}%` }}>
+            <div className={css.textBox}>
+              <h4 className={css.progressItemTitle}>{title}</h4>
+              <p className={css.percent}>{`${percent}`}<sup>%</sup></p>
+            </div>
+            <div className={css.progressContainer} style={{ width: `${width}` }}>
                 <div style={{ width: `${progress}%` }} className={css.progress} />
             </div>
         </div>

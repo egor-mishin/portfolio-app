@@ -9,5 +9,7 @@
 }
 
 .skillSection {
-    margin-top: 5.8em;
+    display: flex;
+    margin-bottom: 6.5em;
+
 }

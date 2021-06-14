@@ -1,24 +1,27 @@
-import * as React from 'react'
-import { FC } from 'react'
-import ProgressBar from '../../common/ProgressBar'
-import IconsSet from '../../common/IconsSet'
-import css from './index.module.css'
-import { IconItem, SkillBox } from "../../../api/types";
+import * as React from "react";
+import { FC } from "react";
+import ProgressBar from "../../common/ProgressBar";
+import IconsSet from "../../common/IconsSet";
+import css from "./index.module.css";
+import { SkillBox } from "../../../api/types";
 
 type Props = {
-	title: string
-	skillBoxes: SkillBox[]
-	iconsSection: {title: string, iconItems: IconItem[]}
+  title: string
+  skillBoxes: SkillBox[]
+  iconsSection: { title: string, iconItems: any }
 }
 
-const SkillSection: FC<Props> = ({ title, skillBoxes }): JSX.Element => {
-	return (
-		<div className={css.skillSection}>
+const SkillSection: FC<Props> = ({ title, skillBoxes, iconsSection }): JSX.Element => {
+  return (
+  	<>
 			<h2 className={css.title}>{title}</h2>
-			<ProgressBar skillBoxes={skillBoxes} />
-			<IconsSet />
-		</div>
-	)
+			<div className={css.skillSection}>
+				<ProgressBar skillBoxes={skillBoxes} />
+				<IconsSet iconsSection={iconsSection} />
+			</div>
+		</>
+
+)
 }
 
-export default SkillSection
+export default SkillSection;

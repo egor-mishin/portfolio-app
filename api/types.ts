@@ -39,13 +39,13 @@ export type SkillItem = {
   title: string
   iconsSection: {
     title: string
-    iconItems: IconItem[]
+    iconItems: IconItemType[]
   }
   skillBoxes: SkillBox[]
 }
 
 
-export type IconItem = {
+export type IconItemType = {
 	title: string
 	icon: { url: string }
 }
