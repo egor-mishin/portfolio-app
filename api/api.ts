@@ -55,3 +55,57 @@ export const SKILLS_SECTION_QUERY = gql`
 		}
 	}
 `
+
+export const PORTFOLIO_SECTION_QUERY = gql`
+    query {
+			portfolioItems{
+				title
+				image{
+					url
+				}
+				textBox
+				slug
+				showOnHomePage
+				iconsSection{
+					title
+					iconItems{
+						title
+						icon{
+							url
+						}
+					}
+				}
+				Links{
+					link{
+						url
+						icon{
+							url
+						}
+						title
+					}
+				}
+			}
+    }
+`
+
+
+export const CURRENT_PROJECT_SECTION_QUERY = gql`
+    query {
+        homePage {
+            currentProjectSection{
+                sectionTitile
+                title
+                image {
+                    url
+                }
+                textBox
+                iconsSection{
+                    title
+                    icon{
+                        url
+                    }
+                }
+            }
+        }
+    }
+`

@@ -1,0 +1,13 @@
+.portfolioSection {
+    background: var(--light-grey-color);
+    position: relative;
+    left: 5em;
+    transform: rotate(-7deg);
+    margin-top: 1em;
+}
+
+
+.portfolioItemsContainer{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,12 +1,9 @@
-:root {
-	font-size: 14px;
-}
 html,
 body {
 	padding: 0;
 	margin: 0;
 	font-family: var(--text-font);
-	overflow-x: hidden;
+	overflow-x: clip;
 }
 
 
@@ -78,4 +75,18 @@ p {
 .flex {
 	display: flex;
 	justify-content: space-between;
+}
+.wrapper {
+	transform: rotate(7deg);
+}
+
+/* ICONSET SMALL */
+
+.small {
+	font-size: .7rem;
+	margin-top: 2.1em;
+}
+
+.small h4 {
+	font-size: 1.3rem;
 }

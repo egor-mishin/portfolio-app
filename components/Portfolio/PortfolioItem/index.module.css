@@ -1,0 +1,39 @@
+.portfolioItem{
+    width: 39em;
+    height: 46.428em;
+    padding: 2.857em;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #fff;
+    box-shadow: -2px 3px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1.428em;
+}
+
+.portfolioImg {
+    width: 20em;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.portfolioItem:nth-child(2n){
+    margin-top: 4em;
+}
+
+.portfolioItemText{
+    width: 18.57em;
+    line-height: 1.7;
+    font-size: 1.1em;
+}
+
+.portfolioItemTitle {
+    font-size: 2.57rem;
+    font-weight: 400;
+    line-height: 1.2;
+    font-family: var(--text-font);
+    max-width: 6em;
+    margin-bottom: .6em;
+}
