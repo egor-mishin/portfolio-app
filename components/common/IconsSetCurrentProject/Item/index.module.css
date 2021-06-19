@@ -1,0 +1,12 @@
+.iconItem{
+    margin-right: 1.45em;
+    text-align: center;
+}
+
+.iconItem img{
+    height: 40px;
+}
+
+.iconTitle {
+    font-size: 1.2rem;
+}

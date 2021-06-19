@@ -29,7 +29,7 @@ const IntroSection: FC<Props> = (): JSX.Element => {
 						<p>{homePage.introSection.TextBox}</p>
 					</article>
 
-					<Button>Посмотреть все работы</Button>
+					<Button url={'/portfolio'}>Посмотреть все работы</Button>
 				</div>
 
 				<div className={css.avatar}>

@@ -1,0 +1,17 @@
+.contactLink {
+    display: flex;
+}
+
+.contactLink img {
+    width: 10em;
+}
+
+.contactLinkText {
+    display: block;
+    max-width: 11em;
+    align-self: center;
+    margin-left: 1em;
+    font-size: 1.714em;
+    color: var(--secondary-color);
+    font-weight: 700;
+}

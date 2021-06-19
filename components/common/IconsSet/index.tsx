@@ -8,7 +8,7 @@ type Props = {
 	iconsSection: { title: string
 		iconItems: IconItemType[]
 	}
-	small: string
+	small?: string
 }
 
 const IconsSet: FC<Props> = ({ iconsSection,  small}): JSX.Element => {

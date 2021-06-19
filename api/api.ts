@@ -58,7 +58,9 @@ export const SKILLS_SECTION_QUERY = gql`
 
 export const PORTFOLIO_SECTION_QUERY = gql`
     query {
-			portfolioItems{
+			portfolioItems(where: {
+          showOnHomePage: true
+      }){
 				title
 				image{
 					url
@@ -91,21 +93,70 @@ export const PORTFOLIO_SECTION_QUERY = gql`
 
 export const CURRENT_PROJECT_SECTION_QUERY = gql`
     query {
-        homePage {
-            currentProjectSection{
-                sectionTitile
-                title
-                image {
-                    url
-                }
-                textBox
-                iconsSection{
-                    title
-                    icon{
-                        url
-                    }
-                }
-            }
-        }
+			homePage {
+				currentProjectSection{
+					sectionTitile
+					title
+					image {
+						url
+					}
+					textBox
+					
+					Links {
+						url
+						icon {
+							url
+						}
+					}
+				}
+				IconsSection {
+					title
+					iconItems {
+						title
+						icon {
+							url
+						}
+					}
+				}
+			}
     }
+`
+
+export const BLOG_ITEMS_QUERY = gql`
+	query {
+		blogItems(where: {showOnHomePage: true}){
+			title
+			textBox
+			blogImage {
+				url
+			}
+			slug
+			button{
+				title
+			}
+		}
+	}
+`
+
+export const CONTACTS_QUERY = gql`
+	query {
+		contact{
+			title
+			Links{
+				title
+				url
+				icon{
+					url
+				}
+			}
+		}
+	}
+`
+
+export const FOOTER_QUERY = gql`
+	query {
+		footer{
+			copyright
+		}
+	}
 `
