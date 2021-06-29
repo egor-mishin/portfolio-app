@@ -2,11 +2,13 @@ import * as React from 'react'
 import { FC } from 'react'
 import css from './index.module.css'
 
-type Props = {}
+type Props = {
+	cssClass: string
+}
 
-const Logo: FC<Props> = (): JSX.Element => {
+const Logo: FC<Props> = ({cssClass}): JSX.Element => {
 	return (
-		<a href="/" className={css.logo}>
+		<a href="/" className={`${cssClass}`} >
 			<svg
 				width="93"
 				height="47"

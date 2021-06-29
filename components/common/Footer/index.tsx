@@ -18,14 +18,11 @@ const Footer: FC<Props> = (): JSX.Element => {
   const { footer } = data;
 
   return (
-    <footer>
-      <div className="container--wider">
+    <footer className={css.footer}>
         <p className={css.copyright}>
-          {date.getFullYear()}&copy;{footer.copyright}
+          <span>{date.getFullYear()}&copy;</span>{footer.copyright}
         </p>
-        <Logo />
-      </div>
-
+        <Logo cssClass={'bottomLogo'}/>
     </footer>
   );
 };

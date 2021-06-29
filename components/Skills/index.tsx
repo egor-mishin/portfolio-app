@@ -2,26 +2,14 @@ import * as React from 'react'
 import { FC } from 'react'
 import css from './index.module.css'
 import Title from '../common/Title'
-import { useQuery } from '@apollo/client'
-import { SKILLS_SECTION_QUERY } from '../../api/api'
 import SkillSection from './SkillSection'
-import { SkillsType } from "../../api/types";
+import { SkillItem } from "../../api/types";
 
-type Props = {}
+type Props = {
+	skillItems: SkillItem[]
+}
 
-const Skills: FC<Props> = (): JSX.Element => {
-	const { loading, error, data } = useQuery<SkillsType>(SKILLS_SECTION_QUERY)
-
-	if (error) return <div>Failed to load</div>
-	if (loading)
-		return (
-			<div>
-
-			</div>
-		)
-
-	const { skillItems } = data
-
+const Skills: FC<Props> = ({skillItems}): JSX.Element => {
 	return (
 		<section className={css.skills}>
 			<div className="container">

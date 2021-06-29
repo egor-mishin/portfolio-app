@@ -2,25 +2,13 @@ import * as React from 'react'
 import {FC} from "react"
 import css from './index.module.css'
 import Title from "../common/Title";
-import { useQuery } from "@apollo/client";
-import { CurrentProjectSection } from "../../api/types";
-import { BLOG_ITEMS_QUERY } from "../../api/api";
 import { BlogItem } from "./BlogItem";
 
 type Props = {
+    blogItems: any
+}
 
-};
-
-const  Blog: FC<Props> = (): JSX.Element => {
-    const { loading, error, data } = useQuery<any>(BLOG_ITEMS_QUERY);
-
-    if (error) return <div>Failed to load</div>;
-    if (loading) return <div></div>;
-
-    const { blogItems } = data;
-    console.log(blogItems)
-
-
+const  BlogItems: FC<Props> = ({blogItems}): JSX.Element => {
     return (
       <section className={css.blogSection}>
         <div className="container">
@@ -35,4 +23,4 @@ const  Blog: FC<Props> = (): JSX.Element => {
     )
 }
 
-export default  Blog
+export default  BlogItems

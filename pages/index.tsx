@@ -1,29 +1,34 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Layout from '../layouts'
-import IntroSection from '../components/IntroSection'
-import Skills from '../components/Skills'
-import Portfolio from '../components/Portfolio'
-import CurrentProject from '../components/CurrentProject'
-import Blog from '../components/Blog'
+import Layout from "../layouts"
+import { useQuery } from "@apollo/client";
+import { HomePageType } from "../api/types";
+import { HOMEPAGE_QUERY } from "../api/api";
+import * as React from "react";
+import IntroSection from "../components/IntroSection";
+import Skills from "../components/Skills";
+import PortfolioItems from "../components/Portfolio";
+import CurrentProject from "../components/CurrentProject";
+import Blog from "../components/Blog";
 
 export default function Home() {
-	return (
-		<div className={styles.container}>
-			<Head>
-				<title>Portfolio App</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+    const {error, loading, data} = useQuery<HomePageType>(HOMEPAGE_QUERY)
 
-			<Layout>
-				<IntroSection />
-				<main>
-					<Skills />
-					<Portfolio />
-					<CurrentProject />
-					<Blog />
-				</main>
-			</Layout>
-		</div>
-	)
+  if (error) return <div>Failed to load</div>
+  if (loading) return <div></div>
+
+ const { homePage } = data
+ const { skillItems } = data
+ const { blogItems } = data
+ const { portfolioItems } = data
+
+  return (
+      <Layout>
+        <IntroSection {...homePage.introSection} />
+        <main>
+          <Skills skillItems={skillItems}/>
+          <PortfolioItems portfolioItems={portfolioItems}/>
+          <CurrentProject {...homePage.currentProjectSection} iconsSection={homePage.IconsSection}/>
+          <Blog blogItems={blogItems}/>
+        </main>
+      </Layout>
+  )
 }

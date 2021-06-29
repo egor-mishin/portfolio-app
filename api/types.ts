@@ -22,7 +22,16 @@ export type SocialLink = {
 // Home Page
 
 export type HomePageType = {
-  homePage: any
+  homePage: {
+    currentProjectSection: CurrentProjectSectionType;
+    IconsSection: IconItemType[]
+    introSection: IntroSection
+  }
+  skillItems: SkillItem[]
+  portfolioItems: PortfolioItem[]
+  currentProjectSection: CurrentProjectSectionType
+  IconsSection: IconItemType[]
+  blogItems: any
 }
 
 type IntroSection = {
@@ -61,11 +70,7 @@ export type IconItemType = {
 
 // Portfolio Section
 
-export type PortfolioSectionType = {
-  portfolioItems: portfolioItem[]
-}
-
-export type LinksType = {
+export type LinkType = {
   url: string
   title: string
   icon: {
@@ -74,7 +79,7 @@ export type LinksType = {
 
 }
 
-type portfolioItem = {
+export type PortfolioItem = {
   title: string
   texBox: string
   image: { url: string }
@@ -99,10 +104,6 @@ export type CurrentProjectSectionType = {
   }
   textBox: string
   iconsSection: IconItemType[]
-}
-
-export type CurrentProjectSection = {
-  homePage: {currentProjectSection: CurrentProjectSectionType}
 }
 
 // Blog Section

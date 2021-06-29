@@ -34,7 +34,7 @@ h4 {
 }
 
 section{
-	margin-top: 4.5em;
+	margin-top: 11.5em;
 }
 p {
 	margin: 0;
@@ -72,6 +72,11 @@ p {
 	margin: 0 auto;
 }
 
+.container--wider {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
 .flex {
 	display: flex;
 	justify-content: space-between;
@@ -89,4 +94,22 @@ p {
 
 .small h4 {
 	font-size: 1.3rem;
+}
+
+/* LOGOS STYLE */
+
+.topLogo {
+	position: absolute;
+	right: 2.857em;
+	top: 2.857em;
+}
+
+.bottomLogo {
+	position: absolute;
+	right: 2.857em;
+	bottom: 0;
+
+	-webkit-filter: grayscale(100%); /* black and white */
+	filter: grayscale(100%);
+	opacity: .5;
 }

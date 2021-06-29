@@ -1,23 +1,16 @@
 import * as React from "react";
 import { FC } from "react";
-import { useQuery } from "@apollo/client";
-import { PORTFOLIO_SECTION_QUERY } from "../../api/api";
 import css from "./index.module.css";
-import { PortfolioSectionType } from "../../api/types";
 import { PortfolioItem } from "./PortfolioItem";
 import Title from "../common/Title";
 import Button from "../common/Button";
 
 
-type Props = {}
+type Props = {
+	portfolioItems: any
+}
 
-const IntroSection: FC<Props> = (): JSX.Element => {
-  const { loading, error, data } = useQuery<PortfolioSectionType>(PORTFOLIO_SECTION_QUERY);
-
-  if (error) return <div>Failed to load</div>;
-  if (loading) return <div></div>;
-
-  const { portfolioItems } = data;
+const PortfolioItems: FC<Props> = ({portfolioItems}): JSX.Element => {
 
   return (
   	<>
@@ -45,4 +38,4 @@ const IntroSection: FC<Props> = (): JSX.Element => {
   );
 };
 
-export default IntroSection;
+export default PortfolioItems;

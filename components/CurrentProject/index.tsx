@@ -1,39 +1,35 @@
-import * as React from "react";
-import { FC } from "react";
-import { useQuery } from "@apollo/client";
-import { CURRENT_PROJECT_SECTION_QUERY } from "../../api/api";
-import css from "./index.module.css";
-import Title from "../common/Title";
-import { CurrentProjectSection } from "../../api/types";
-import ProjectImage from "./ProjectImage";
+import * as React from "react"
+import { FC } from "react"
+import css from "./index.module.css"
+import Title from "../common/Title"
+import ProjectImage from "./ProjectImage"
 import IconsSetCurrentProject from "../common/IconsSetCurrentProject";
-import LinkIcons from "../common/LinkIcons";
+import LinkIcons from "../common/LinkIcons"
+import { IconItemType, LinkType } from "../../api/types"
 
 
-type Props = {}
+type Props = {
+  title: string
+  image: {url: string}
+  textBox: string
+  iconsSection: IconItemType[]
+  Links: LinkType[]
+}
 
-const CurrentProject: FC<Props> = (): JSX.Element => {
-    const { loading, error, data } = useQuery<CurrentProjectSection>(CURRENT_PROJECT_SECTION_QUERY);
-
-    if (error) return <div>Failed to load</div>;
-    if (loading) return <div></div>;
-
-    const { homePage } = data;
-    console.log(homePage.currentProjectSection)
-
+const CurrentProject: FC<Props> = ({image, title,textBox,iconsSection, Links}): JSX.Element => {
     return (
       <section className={css.currentProjectSection}>
         <div className="container">
           <Title>Мой текущий проект</Title>
           <div className={css.currentProjectBox}>
-            <ProjectImage url={homePage.currentProjectSection.image.url} title={homePage.currentProjectSection.title}/>
+            <ProjectImage url={image.url} title={title}/>
             <div className={css.projectDescriptionBox}>
               <article>
-                <h3 className={css.currentProjectTitle}>{homePage.currentProjectSection.title}</h3>
-                <p className={css.currentProjectText}>{homePage.currentProjectSection.textBox}</p>
+                <h3 className={css.currentProjectTitle}>{title}</h3>
+                <p className={css.currentProjectText}>{textBox}</p>
               </article>
-              <IconsSetCurrentProject iconsSection={homePage.IconsSection}/>
-              <LinkIcons  links={homePage.currentProjectSection.Links}/>
+              <IconsSetCurrentProject iconsSection={iconsSection}/>
+              <LinkIcons  links={Links}/>
             </div>
           </div>
         </div>
