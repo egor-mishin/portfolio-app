@@ -6,6 +6,7 @@ import { CONTACTS_QUERY } from "../../api/api"
 import ContactItem from "./ContactItem";
 import Title from "../common/Title";
 import { ContactsType } from "../../api/types";
+import Preloader from "../common/Preloader";
 
 type Props = {
 
@@ -15,7 +16,7 @@ const  Contacts: FC<Props> = (): JSX.Element => {
     const { loading, error, data } = useQuery<ContactsType>(CONTACTS_QUERY);
 
     if (error) return <div>Failed to load</div>
-    if (loading) return <div></div>
+    if (loading) return <div><Preloader/></div>
 
     const { contact } = data
 

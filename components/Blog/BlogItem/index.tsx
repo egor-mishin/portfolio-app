@@ -3,13 +3,14 @@ import css from './index.module.css'
 import Button from "../../common/Button"
 
 type Props = {
+  id: number
   title: string
   image: { url: string }
   slug: string
   textBox: string
 
 }
-export const BlogItem = ({ title, image, textBox, slug }:Props) => {
+export const BlogItem = ({ title, image, textBox, slug, id }:Props) => {
   return (
     <div className={css.blogItem}>
       <img
@@ -22,7 +23,7 @@ export const BlogItem = ({ title, image, textBox, slug }:Props) => {
         <p className={css.blogItemText}>
           {textBox}
         </p>
-        <Button url={`blog/${slug}`}>Подробнее</Button>
+        <Button url={`/blog/${id}`}>Подробнее</Button>
       </article>
     </div>
   )

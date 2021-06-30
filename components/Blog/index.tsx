@@ -15,7 +15,7 @@ const  BlogItems: FC<Props> = ({blogItems}): JSX.Element => {
             <Title>Мой блог.</Title>
             <div className={css.blogItemsBox}>
                 {
-                    blogItems.map((item) => <BlogItem title={item.title} image={item.blogImage} slug={item.slug} textBox={item.textBox} />)
+                    blogItems.map((item) => <BlogItem id={item.id} title={item.title} image={item.blogImage} slug={item.slug} textBox={item.textBox} />)
                 }
             </div>
         </div>

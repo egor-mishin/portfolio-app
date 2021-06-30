@@ -104,6 +104,7 @@ export const HOMEPAGE_QUERY = gql`
             }
         }
         blogItems(where: {showOnHomePage: true}){
+            id
             title
             textBox
             blogImage {
@@ -168,6 +169,23 @@ export const BLOG_PAGE_QUERY = gql`
             }
         }
         blogItems{
+            id
+            title
+            textBox
+            blogImage {
+                url
+            }
+            slug
+            button{
+                title
+            }
+        }
+    }
+`
+export const SINGLE_BLOG_PAGE = gql`
+    query($id: ID!) {
+        blogItem(id: $id){
+            id
             title
             textBox
             blogImage {
@@ -201,4 +219,3 @@ export const FOOTER_QUERY = gql`
         }
     }
 `
-

@@ -7,6 +7,7 @@ import Menu from './Menu'
 import SocialLinks from './SocialLinks'
 import MailIcon from './MailIcon'
 import { NavBarType } from "../../../api/types";
+import Preloader from "../Preloader";
 
 type Props = {}
 
@@ -14,7 +15,7 @@ const NavBar: FC<Props> = (): JSX.Element => {
 	const { loading, error, data } = useQuery<NavBarType>(NAVBAR_QUERY)
 
 	if (error) return <div>Failed to load</div>
-	if (loading) return <div></div>
+	if (loading) return <div><Preloader/></div>
 
 	return (
 		<div className={css.navBar}>

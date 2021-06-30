@@ -8,12 +8,13 @@ import Skills from "../components/Skills";
 import PortfolioItems from "../components/Portfolio";
 import CurrentProject from "../components/CurrentProject";
 import Blog from "../components/Blog";
+import Preloader from "../components/common/Preloader";
 
 export default function Home() {
     const {error, loading, data} = useQuery<HomePageType>(HOMEPAGE_QUERY)
 
   if (error) return <div>Failed to load</div>
-  if (loading) return <div></div>
+  if (loading) return <div><Preloader /></div>
 
  const { homePage } = data
  const { skillItems } = data

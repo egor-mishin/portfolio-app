@@ -12,9 +12,9 @@ type Props = {
 
 const Icon: FC<Props> = ({ title, url, icon }): JSX.Element => {
   return (
-    <Link  href={url}>
+    <a href={url}>
       <img src={icon.url} alt={title}  className={css.icon}/>
-    </Link>
+    </a>
   )
 }
 

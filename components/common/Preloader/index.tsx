@@ -7,7 +7,9 @@ type Props = {
 
 const  Preloader: FC<Props> = (): JSX.Element => {
     return (
-        <>Preloader</>
+        <>
+           Loading
+        </>
     )
 }
 
