@@ -8,10 +8,11 @@ import Button from '../common/Button'
 type Props = {
 	title: string
 	image: {url: string}
-	TextBox: string
+	textBox: string
+	button?: {title: string}
 }
 
-const IntroSection: FC<Props> = ({ title, image,TextBox }): JSX.Element => {
+const IntroSection: FC<Props> = ({ title, image,textBox, button }): JSX.Element => {
 	return (
 		<header className={css.introSection}>
 			<div className="container flex">
@@ -20,10 +21,11 @@ const IntroSection: FC<Props> = ({ title, image,TextBox }): JSX.Element => {
 						<ReactMarkdown>
 							{title}
 						</ReactMarkdown>
-						<p>{TextBox}</p>
+						<p>{textBox}</p>
 					</article>
-
-					<Button url={'/portfolio'}>Посмотреть все работы</Button>
+					{
+						button && <Button url={'/portfolio'}>{button.title}</Button>
+					}
 				</div>
 
 				<div className={css.avatar}>

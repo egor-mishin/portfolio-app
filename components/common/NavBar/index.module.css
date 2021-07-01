@@ -18,11 +18,11 @@
 }
 
 .navBar a {
-	transition: ease-in-out .5s;
+	-webkit-transition : -webkit-filter 100ms linear;
 	display: block;
 }
 
 
-.navBar a:hover img, .navBar a:hover span, .navBar svg:hover path{
+.navBar a:hover {
 	filter: var(--filter-color)
 }

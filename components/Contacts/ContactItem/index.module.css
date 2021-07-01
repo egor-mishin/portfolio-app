@@ -1,5 +1,11 @@
 .contactLink {
     display: flex;
+    width: 100%;
+}
+
+.contactLink:hover{
+    filter: invert(49%) sepia(7%) saturate(6218%) hue-rotate(318deg) brightness(89%) contrast(109%);
+
 }
 
 .contactLink img {

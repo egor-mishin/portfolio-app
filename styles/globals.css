@@ -36,6 +36,7 @@ h4 {
 section{
 	margin-top: 11.5em;
 }
+
 p {
 	margin: 0;
 	padding: 0;
@@ -83,6 +84,11 @@ p {
 }
 .wrapper {
 	transform: rotate(7deg);
+}
+
+.buttonContainer{
+	margin-top: 8.5em;
+	text-align: center;
 }
 
 /* ICON SET SMALL */

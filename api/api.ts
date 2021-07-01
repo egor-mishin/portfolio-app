@@ -26,12 +26,26 @@ export const HOMEPAGE_QUERY = gql`
         homePage {
             introSection {
                 title
-                TextBox
+                textBox
                 image {
                     url
                 }
+                button {
+                    title
+                }
             }
-
+            portfolioSection {
+                title
+                button {
+                    title
+                }
+            }
+            blogSection {
+                title
+                button {
+                    title
+                }
+            }
             currentProjectSection{
                 sectionTitile
                 title
@@ -116,15 +130,18 @@ export const HOMEPAGE_QUERY = gql`
             }
         }
     }
-`
+`;
 export const PORTFOLIO_PAGE_QUERY = gql`
     query {
         portfolioPage {
             introSection {
                 title
-                TextBox
+                textBox
                 image {
                     url
+                }
+                button{
+                    title
                 }
             }
         }
@@ -156,15 +173,18 @@ export const PORTFOLIO_PAGE_QUERY = gql`
             }
         }
     }
-`
+`;
 export const BLOG_PAGE_QUERY = gql`
     query {
         blogPage {
             introSection {
                 title
-                TextBox
+                textBox
                 image {
                     url
+                }
+                button{
+                    title
                 }
             }
         }
@@ -181,7 +201,7 @@ export const BLOG_PAGE_QUERY = gql`
             }
         }
     }
-`
+`;
 export const SINGLE_BLOG_PAGE = gql`
     query($id: ID!) {
         blogItem(id: $id){
@@ -197,7 +217,7 @@ export const SINGLE_BLOG_PAGE = gql`
             }
         }
     }
-`
+`;
 export const CONTACTS_QUERY = gql`
     query contact{
         contact{
@@ -211,11 +231,11 @@ export const CONTACTS_QUERY = gql`
             }
         }
     }
-`
+`;
 export const FOOTER_QUERY = gql`
     query {
         footer{
             copyright
         }
     }
-`
+`;

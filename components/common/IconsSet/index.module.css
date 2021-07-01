@@ -2,6 +2,10 @@
     margin-bottom: 9em;
 }
 
+.iconsSet:last-child {
+    margin-bottom: 0;
+}
+
 .iconsSetTitle{
     margin-bottom: .85em;
     font-size: 1.714rem;

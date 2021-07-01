@@ -6,10 +6,14 @@
     letter-spacing: .24em;
     font-weight: 700;
     margin-bottom: .6em;
+    line-height: 80%;
 }
 
 .skillSection {
     display: flex;
-    margin-bottom: 6.5em;
+     margin-bottom: 6.5em;
+}
 
+.skillSection:last-child{
+    margin-bottom: 0;
 }

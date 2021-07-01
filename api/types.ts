@@ -26,6 +26,8 @@ export type HomePageType = {
     currentProjectSection: CurrentProjectSectionType;
     IconsSection: IconItemType[]
     introSection: IntroSection
+    portfolioSection: any
+    blogSection: any
   }
   skillItems: SkillItem[]
   portfolioItems: PortfolioItem[]

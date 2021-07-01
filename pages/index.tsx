@@ -1,4 +1,4 @@
-import Layout from "../layouts"
+import Layout from "../layouts";
 import { useQuery } from "@apollo/client";
 import { HomePageType } from "../api/types";
 import { HOMEPAGE_QUERY } from "../api/api";
@@ -11,25 +11,26 @@ import Blog from "../components/Blog";
 import Preloader from "../components/common/Preloader";
 
 export default function Home() {
-    const {error, loading, data} = useQuery<HomePageType>(HOMEPAGE_QUERY)
+  const { error, loading, data } = useQuery<HomePageType>(HOMEPAGE_QUERY);
 
-  if (error) return <div>Failed to load</div>
-  if (loading) return <div><Preloader /></div>
+  if (error) return <div>Failed to load</div>;
+  if (loading) return <div><Preloader /></div>;
 
- const { homePage } = data
- const { skillItems } = data
- const { blogItems } = data
- const { portfolioItems } = data
+  const { homePage } = data;
+  const { skillItems } = data;
+  const { blogItems } = data;
+  const { portfolioItems } = data;
 
   return (
-      <Layout>
-        <IntroSection {...homePage.introSection} />
-        <main>
-          <Skills skillItems={skillItems}/>
-          <PortfolioItems portfolioItems={portfolioItems}/>
-          <CurrentProject {...homePage.currentProjectSection} iconsSection={homePage.IconsSection}/>
-          <Blog blogItems={blogItems}/>
-        </main>
-      </Layout>
-  )
+    <Layout>
+      <IntroSection {...homePage.introSection} />
+      <main>
+        <Skills skillItems={skillItems} />
+        <PortfolioItems portfolioItems={portfolioItems} mainTitle={homePage.portfolioSection.title}
+                        mainButton={homePage.portfolioSection.button} />
+        <CurrentProject {...homePage.currentProjectSection} iconsSection={homePage.IconsSection} />
+        <Blog blogItems={blogItems}  mainTitle={homePage.blogSection.title} mainButton={homePage.blogSection.button} />
+      </main>
+    </Layout>
+  );
 }

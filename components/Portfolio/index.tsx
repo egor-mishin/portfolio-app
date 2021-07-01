@@ -8,14 +8,17 @@ import Button from "../common/Button";
 
 type Props = {
 	portfolioItems: any
+	mainTitle: string
+	mainButton: {title: string}
 }
 
-const PortfolioItems: FC<Props> = ({portfolioItems}): JSX.Element => {
-
+const PortfolioItems: FC<Props> = ({portfolioItems, mainTitle, mainButton}): JSX.Element => {
   return (
-  	<>
+  	<section>
 			<div className="container">
-				<Title>Мои работы.</Title>
+				{
+					mainTitle && <Title>{mainTitle}</Title>
+				}
 			</div>
 
 			<section className={css.portfolioSection}>
@@ -31,10 +34,10 @@ const PortfolioItems: FC<Props> = ({portfolioItems}): JSX.Element => {
 					</div>
 				</div>
 			</section>
-			<div className={"container"}>
-				<Button url="/portfolio/">Посмотреть все работы</Button>
+			<div className={"buttonContainer"}>
+				<Button url="/portfolio/">{mainButton.title}</Button>
 			</div>
-		</>
+		</section>
   );
 };
 
