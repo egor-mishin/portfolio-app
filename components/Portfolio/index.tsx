@@ -8,7 +8,7 @@ import Button from "../common/Button";
 
 type Props = {
 	portfolioItems: any
-	mainTitle: string
+	mainTitle?: string
 	mainButton?: {title: string}
 }
 

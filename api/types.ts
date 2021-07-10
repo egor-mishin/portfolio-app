@@ -37,11 +37,9 @@ export type HomePageType = {
 }
 
 type IntroSection = {
-  introSection: {
     title: string
     TextBox: string
     image: { url: string }
-  }
 }
 
 export type SkillsType = {

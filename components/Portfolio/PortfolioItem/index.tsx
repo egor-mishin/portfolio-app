@@ -2,14 +2,14 @@ import * as React from "react"
 import css from './index.module.css'
 import IconsSet from "../../common/IconsSet";
 import LinkIcons from "../../common/LinkIcons";
-import { IconItemType, LinksType } from "../../../api/types";
+import { IconItemType, LinkType } from "../../../api/types";
 
 type Props = {
   title: string
   image: { url: string }
   textBox: string
   iconsSection: { title: string; iconItems: IconItemType[] }
-  Links: {link: LinksType[]}
+  Links: {link: LinkType[]}
 
 }
 export const PortfolioItem = ({ title, image, textBox, iconsSection, Links }:Props) => {

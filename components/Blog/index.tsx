@@ -7,8 +7,8 @@ import Button from "../common/Button";
 
 type Props = {
     blogItems: any
-    mainTitle: string
-    mainButton: {title: string}
+    mainTitle?: string
+    mainButton?: {title: string}
 }
 
 const  BlogItems: FC<Props> = ({blogItems, mainTitle, mainButton}): JSX.Element => {

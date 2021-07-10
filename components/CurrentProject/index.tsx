@@ -9,11 +9,11 @@ import { IconItemType, LinkType } from "../../api/types"
 
 
 type Props = {
-  title: string
-  image: {url: string}
-  textBox: string
-  iconsSection: IconItemType[]
-  Links: LinkType[]
+  title?: string
+  image?: {url: string}
+  textBox?: string
+  iconsSection?: IconItemType[]
+  Links?: LinkType[]
 }
 
 const CurrentProject: FC<Props> = ({image, title,textBox,iconsSection, Links}): JSX.Element => {

@@ -6,9 +6,9 @@ import Button from '../common/Button'
 
 
 type Props = {
-	title: string
-	image: {url: string}
-	textBox: string
+	title?: string
+	image?: {url: string}
+	textBox?: string
 	button?: {title: string}
 }
 

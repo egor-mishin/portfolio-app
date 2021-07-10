@@ -5,7 +5,7 @@ import Lang from "./Lang/index.module";
 import css  from "./index.module.css";
 
 type Props = {
-  languages: []
+  languages: any
 };
 
 const  LangConsole: FC<Props> = (): JSX.Element => {

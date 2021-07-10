@@ -16,11 +16,12 @@ const Blog: FC<Props> = (): JSX.Element => {
 	if (error) return <div>Failed to load</div>
 	if (loading) return <div><Preloader /></div>
 
+	// @ts-ignore
 	return (
 		<Layout>
 			<IntroSection {...data.blogPage.introSection}/>
 			<main>
-				<BlogItems blogItems={data.blogItems}/>
+				<BlogItems blogItems={data.blogItems} />
 			</main>
 		</Layout>
 	)
