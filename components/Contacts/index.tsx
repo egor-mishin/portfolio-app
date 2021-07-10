@@ -26,7 +26,9 @@ const  Contacts: FC<Props> = (): JSX.Element => {
 
     return (
       <>
-        <Modal isOpen={isOpen} setIsOpen={setIsOpen}><Form {...formElements} /></Modal>
+        <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+          Form
+        </Modal>
         <section className={css.contactsBox} id={"contact"}>
 
           <div className="container">
