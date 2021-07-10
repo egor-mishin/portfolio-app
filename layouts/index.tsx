@@ -5,6 +5,7 @@ import Logo from "../components/common/Logo";
 import Footer from "../components/common/Footer";
 import Head from "next/head";
 import Contacts from "../components/Contacts";
+import Modal from "../components/Modal/index.module";
 
 type Props = {}
 

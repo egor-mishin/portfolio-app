@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {FC} from "react"
+import { FC, useState } from "react";
 import css from "./index.module.css"
 import { useQuery } from "@apollo/client";
 import { CONTACTS_QUERY } from "../../api/api"
@@ -7,13 +7,17 @@ import ContactItem from "./ContactItem";
 import Title from "../common/Title";
 import { ContactsType } from "../../api/types";
 import Preloader from "../common/Preloader";
+import Modal from "../Modal/index.module";
+import Form from "../common/Form";
+import { formElements } from "../common/Form/data";
 
 type Props = {
 
 }
 
 const  Contacts: FC<Props> = (): JSX.Element => {
-    const { loading, error, data } = useQuery<ContactsType>(CONTACTS_QUERY);
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const { loading, error, data } = useQuery<ContactsType>(CONTACTS_QUERY);
 
     if (error) return <div>Failed to load</div>
     if (loading) return <div><Preloader/></div>
@@ -21,19 +25,23 @@ const  Contacts: FC<Props> = (): JSX.Element => {
     const { contact } = data
 
     return (
-      <section className={css.contactsBox}>
+      <>
+        <Modal isOpen={isOpen} setIsOpen={setIsOpen}><Form {...formElements} /></Modal>
+        <section className={css.contactsBox} id={"contact"}>
 
-        <div className="container">
-           <div className="wrapper">
-               <Title>{contact.title}</Title>
-               <div className={css.linksBox}>
-                   {
-                       contact.Links.map(link => <ContactItem {...link} />)
-                   }
-               </div>
-           </div>
-        </div>
-      </section>
+          <div className="container">
+            <div className="wrapper">
+              <Title>{contact.title}</Title>
+              <div className={css.linksBox}>
+                {
+                  contact.Links.map(link => <ContactItem {...link}  toggleModal={setIsOpen} isOpen={isOpen}/>)
+                }
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+
     )
 }
 

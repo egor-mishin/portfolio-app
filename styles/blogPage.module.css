@@ -1,3 +1,31 @@
 .postContainer{
+    margin-top: 17em;
+    margin-bottom: 6em;
+    display: flex;
+    justify-content: space-between;
+}
 
+.mainContent {
+    width: 77%;
+}
+
+.postContainer p{
+    margin-bottom: 1.7em;
+    font-size: 1.2em;
+    line-height: 1.7;
+}
+
+.postContainer p:last-child{
+    margin-bottom: 0;
+}
+
+.postContainer img{
+    text-align: center;
+    margin: 2em 0;
+}
+
+.postContainer h2{
+    margin-bottom: 1.15em;
+    line-height: 1.4;
+    font-size: 4em;
 }

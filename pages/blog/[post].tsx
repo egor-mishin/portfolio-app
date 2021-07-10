@@ -7,6 +7,9 @@ import { useRouter } from "next/router"
 import css from "../../styles/blogPage.module.css"
 import BackButton from "../../components/common/BackButton";
 import Preloader from "../../components/common/Preloader";
+import Title from "../../components/common/Title";
+import ReactMarkdown from "react-markdown"
+import BlogList from "../../components/Blog/BlogList";
 
 type Props = {}
 
@@ -21,12 +24,23 @@ const Post: FC<Props> = (): JSX.Element => {
   if (loading) return <div><Preloader /></div>
 
   const { blogItem } = data
+  const { blogItems } = data
 
   return (
     <Layout>
       <div className="container">
        <div className={css.postContainer}>
-         <p>{blogItem.title}</p>
+        <main className={css.mainContent}>
+          <Title>{blogItem.title}</Title>
+          <article>
+            <ReactMarkdown>
+              {blogItem.post}
+            </ReactMarkdown>
+          </article>
+        </main>
+         <aside>
+          <BlogList  blogItems={blogItems}/>
+         </aside>
        </div>
         <BackButton />
       </div>

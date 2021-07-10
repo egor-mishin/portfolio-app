@@ -215,6 +215,20 @@ export const SINGLE_BLOG_PAGE = gql`
             button{
                 title
             }
+            post
+        }
+
+        blogItems{
+            id
+            title
+            textBox
+            blogImage {
+                url
+            }
+            slug
+            button{
+                title
+            }
         }
     }
 `;

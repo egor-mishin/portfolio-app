@@ -6,11 +6,13 @@ type Props = {
     title: string
     url: string
     icon: { url: string }
+    isOpen: boolean
+    toggleModal: (boolean) => boolean
 };
 
-const  ContactItem: FC<Props> = ( { url, title, icon }): JSX.Element => {
+const  ContactItem: FC<Props> = ( { url, title, icon, toggleModal, isOpen }): JSX.Element => {
     return (
-      <a href={url} className={css.contactLink}>
+      <a href={url} className={css.contactLink} title={title}  onClick={() => title === 'Рассказать о проекте' && toggleModal(true)}>
           <img
             src={icon.url}
             alt={title}

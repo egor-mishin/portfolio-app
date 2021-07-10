@@ -9,7 +9,7 @@ import Button from "../common/Button";
 type Props = {
 	portfolioItems: any
 	mainTitle: string
-	mainButton: {title: string}
+	mainButton?: {title: string}
 }
 
 const PortfolioItems: FC<Props> = ({portfolioItems, mainTitle, mainButton}): JSX.Element => {
@@ -35,7 +35,7 @@ const PortfolioItems: FC<Props> = ({portfolioItems, mainTitle, mainButton}): JSX
 				</div>
 			</section>
 			<div className={"buttonContainer"}>
-				<Button url="/portfolio/">{mainButton.title}</Button>
+				<Button url="/portfolio/">{mainButton && mainButton.title}</Button>
 			</div>
 		</section>
   );

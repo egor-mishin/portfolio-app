@@ -8,6 +8,8 @@ import SocialLinks from './SocialLinks'
 import MailIcon from './MailIcon'
 import { NavBarType } from "../../../api/types";
 import Preloader from "../Preloader";
+import LangConsole from "../LangConsole/index.module";
+import { languages } from "../LangConsole/languages";
 
 type Props = {}
 
@@ -21,6 +23,7 @@ const NavBar: FC<Props> = (): JSX.Element => {
 		<div className={css.navBar}>
 			<Menu />
 			<MailIcon />
+			<LangConsole languages = {languages}/>
 			<SocialLinks socialLinks={data.navBar.socialLinks}/>
 		</div>
 	)
