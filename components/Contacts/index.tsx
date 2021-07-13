@@ -9,7 +9,6 @@ import { ContactsType } from "../../api/type";
 import Preloader from "../common/Preloader";
 import Modal from "../Modal/index.module";
 import Form from "../common/Form";
-import { formElements } from "../common/Form/data";
 
 type Props = {
 
