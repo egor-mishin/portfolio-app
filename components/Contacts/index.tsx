@@ -5,7 +5,7 @@ import { useQuery } from "@apollo/client";
 import { CONTACTS_QUERY } from "../../api/api"
 import ContactItem from "./ContactItem";
 import Title from "../common/Title";
-import { ContactsType } from "../../api/types";
+import { ContactsType } from "../../api/type";
 import Preloader from "../common/Preloader";
 import Modal from "../Modal/index.module";
 import Form from "../common/Form";
@@ -27,7 +27,7 @@ const  Contacts: FC<Props> = (): JSX.Element => {
     return (
       <>
         <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-          Form
+          <Form />
         </Modal>
         <section className={css.contactsBox} id={"contact"}>
 

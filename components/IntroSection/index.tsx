@@ -3,6 +3,7 @@ import { FC } from 'react'
 import ReactMarkdown from 'react-markdown'
 import css from './index.module.css'
 import Button from '../common/Button'
+import Image from 'next/image'
 
 
 type Props = {
@@ -29,11 +30,11 @@ const IntroSection: FC<Props> = ({ title, image,textBox, button }): JSX.Element 
 				</div>
 
 				<div className={css.avatar}>
-					<img
+					<Image
 						src={image.url}
 						alt="Picture of the author"
-						width='372px'
-						height='447px'
+						width={372}
+						height={447}
 					/>
 				</div>
 			</div>

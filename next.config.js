@@ -1,7 +1,6 @@
 module.exports = {
 	images: {
-		domains: ['res.cloudinary.com'],
-		loader: 'cloudinary'
+		domains: ["res.cloudinary.com"]
 	},
 
 	exportPathMap: async function (

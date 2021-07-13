@@ -3,7 +3,7 @@ import { FC } from 'react'
 import css from './index.module.css'
 import Title from '../common/Title'
 import SkillSection from './SkillSection'
-import { SkillItem } from "../../api/types";
+import { SkillItem } from "../../api/type";
 
 type Props = {
 	skillItems: SkillItem[]

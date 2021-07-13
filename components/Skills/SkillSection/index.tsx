@@ -3,7 +3,7 @@ import { FC } from "react";
 import ProgressBar from "../../common/ProgressBar";
 import IconsSet from "../../common/IconsSet";
 import css from "./index.module.css";
-import { SkillBox } from "../../../api/types";
+import { SkillBox } from "../../../api/type";
 
 type Props = {
   title: string

@@ -2,7 +2,7 @@ import * as React from "react"
 import css from './index.module.css'
 import IconsSet from "../../common/IconsSet";
 import LinkIcons from "../../common/LinkIcons";
-import { IconItemType, LinkType } from "../../../api/types";
+import { IconItemType, LinkType } from "../../../api/type";
 
 type Props = {
   title: string

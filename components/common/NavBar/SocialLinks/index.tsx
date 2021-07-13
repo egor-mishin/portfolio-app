@@ -2,7 +2,7 @@ import * as React from 'react'
 import { FC } from 'react'
 import css from '../index.module.css'
 import LinkItem from './LinkItem'
-import { SocialLink } from "../../../../api/types";
+import { SocialLink } from "../../../../api/type";
 
 type Props = {
 	socialLinks: SocialLink[]

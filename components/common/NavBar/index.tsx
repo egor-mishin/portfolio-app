@@ -6,7 +6,7 @@ import css from './index.module.css'
 import Menu from './Menu'
 import SocialLinks from './SocialLinks'
 import MailIcon from './MailIcon'
-import { NavBarType } from "../../../api/types";
+import { NavBarType } from "../../../api/type";
 import Preloader from "../Preloader";
 import LangConsole from "../LangConsole/index.module";
 import { languages } from "../LangConsole/languages";

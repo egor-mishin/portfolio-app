@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { FC } from 'react'
 import css from './index.module.css'
-import { IconItemType } from '../../../api/types'
+import { IconItemType } from '../../../api/type'
 import { Item } from "./Item"
 
 type Props = {

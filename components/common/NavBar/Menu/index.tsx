@@ -4,7 +4,7 @@ import Link from "next/link"
 import css from "./index.module.css"
 import { MENU_QUERY } from "../../../../api/api"
 import { useQuery } from "@apollo/client"
-import { MenuType } from "../../../../api/types"
+import { MenuType } from "../../../../api/type"
 import Preloader from "../../Preloader"
 import Modal from "../../../Modal/index.module";
 

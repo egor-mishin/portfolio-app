@@ -1,6 +1,6 @@
 import Layout from "../layouts";
 import { useQuery } from "@apollo/client";
-import { HomePageType } from "../api/types";
+import { HomePageType } from "../api/type";
 import { HOMEPAGE_QUERY } from "../api/api";
 import * as React from "react";
 import IntroSection from "../components/IntroSection";

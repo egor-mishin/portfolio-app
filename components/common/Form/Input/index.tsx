@@ -1,17 +1,17 @@
-import * as React from 'react';
-import {FC} from "react";
+import * as React from 'react'
+import {  useController } from "react-hook-form"
 
-type Props = {
-    type: 'text' | 'submit'
-    name: string
-    value: string
-};
 
-const  Input: FC<Props> = ({type, name, value}): JSX.Element => {
+const  Input = (props): JSX.Element => {
+  const { field, fieldState} = useController(props)
+
     return (
-        <fieldset>
-          <input type={type} name={name}  placeholder={value}/>
-        </fieldset>
+      <div>
+        <input {...field} placeholder={props.placeholder} />
+        <p>{fieldState.invalid && fieldState.isTouched && 'Field is required'}</p>
+      </div>
+
+
     )
 }
 

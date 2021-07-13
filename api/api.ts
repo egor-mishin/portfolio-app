@@ -253,3 +253,22 @@ export const FOOTER_QUERY = gql`
         }
     }
 `;
+
+export const CREATE_MESSAGE_MUTATION = gql`
+    mutation createFormRequest($name: String!, $email: String!, $projectDetails: String!) {
+        createFormRequest(
+            input: {
+                data:{
+                    name: $name
+                    email: $email
+                    projectDetails: $projectDetails
+                    
+                }
+            }
+        ) {
+            formRequest{
+                name
+            }
+        }
+    }
+`;

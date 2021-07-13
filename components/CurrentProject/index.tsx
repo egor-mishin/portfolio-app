@@ -5,7 +5,7 @@ import Title from "../common/Title"
 import ProjectImage from "./ProjectImage"
 import IconsSetCurrentProject from "../common/IconsSetCurrentProject";
 import LinkIcons from "../common/LinkIcons"
-import { IconItemType, LinkType } from "../../api/types"
+import { IconItemType, LinkType } from "../../api/type"
 
 
 type Props = {
