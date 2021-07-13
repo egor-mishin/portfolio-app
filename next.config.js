@@ -1,7 +1,6 @@
 module.exports = {
 	images: {
-		loader: 'default',
-		domains: ["res.cloudinary.com"],
+		loader: 'cloudinary'
 	},
 
 	exportPathMap: async function (
@@ -16,3 +15,4 @@ module.exports = {
 	},
 
 }
+// https://res.cloudinary.com/dwdpk9oxk/image/upload/v1617285951/avatar_0840e6c685.png?w=750&q=75
