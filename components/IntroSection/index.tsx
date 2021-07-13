@@ -30,7 +30,7 @@ const IntroSection: FC<Props> = ({ title, image,textBox, button }): JSX.Element 
 				</div>
 
 				<div className={css.avatar}>
-					<Image
+					<img
 						src={image.url}
 						alt="Picture of the author"
 						width={372}
