@@ -1,0 +1,36 @@
+.inputField {
+    width: 20em;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--secondary-color);
+    font-family: var(--text-font);
+    font-size: 1.2em;
+    padding-bottom: .5em;
+    margin-top: 2em;
+}
+
+.submitField {
+    font-size: 1.142rem;
+    padding: .7375em 1.675em;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: .5em;
+    margin-top: 2em;
+
+    color: var(--main-color);
+    font-family: var(--text-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+}
+
+.submitField:hover {
+    background: var(--main-color);
+    color: var(--light-grey-color);
+}
+
+.inputField:focus {
+    outline: none;
+}

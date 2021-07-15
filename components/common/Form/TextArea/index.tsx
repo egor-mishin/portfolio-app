@@ -1,13 +1,13 @@
-import { useController, UseControllerProps } from "react-hook-form";
-import { FormValues } from "../type";
+import { useController } from "react-hook-form";
 import * as React from "react";
+import css from './index.module.css'
 
 const  TextArea = (props): JSX.Element => {
   const { field, fieldState } = useController(props)
   return (
-      <div>
-        <textarea {...field} placeholder={props.placeholder} />
-        <p>{fieldState.invalid && fieldState.isTouched && 'Field is required'}</p>
+      <div className={css.textAreaContainer}>
+        <textarea {...field} placeholder={props.placeholder}  className={css.textArea} cols={20}/>
+        <p className='error'>{fieldState.invalid && fieldState.isTouched && 'Field is required'}</p>
       </div>
   )
 }

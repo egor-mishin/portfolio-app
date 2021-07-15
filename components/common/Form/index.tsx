@@ -13,7 +13,7 @@ type Props = {};
 const Form = () => {
   const { handleSubmit, control, formState: { isSubmitSuccessful } } = useForm<FormValues>({mode: "onChange" })
 
-  const [createFormRequest, { data }] = useMutation<FormValues>(CREATE_MESSAGE_MUTATION);
+  const [createFormRequest] = useMutation<FormValues>(CREATE_MESSAGE_MUTATION);
   const onSubmit: SubmitHandler<FormValues> = formData => {
     createFormRequest({ variables: { ...formData } })
   }
@@ -26,7 +26,7 @@ const Form = () => {
         <Input  control={control} name='email' rules={{ required: true }} placeholder={'What is your email?'}/>
         <TextArea control={control} name='projectDetails' rules={{ required: true }} placeholder={'Describe your project'}/>
 
-        <input type="submit" className={'btn'}/>
+        <Input type="submit" name="submit" control={control}/>
         {isSubmitSuccessful && (<><SubmitSuccessesMessage/></> )}
       </form>
     </div>

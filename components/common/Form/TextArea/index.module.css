@@ -1,0 +1,17 @@
+.textArea {
+    width: 20em;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--secondary-color);
+    font-size: 1.2em;
+    padding-bottom: .5em;
+    margin-top: 2em;
+    font-family: var(--text-font);
+    color: var(--text-color);
+}
+
+.textArea:focus {
+    outline: none;
+}

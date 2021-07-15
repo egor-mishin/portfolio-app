@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {FC} from "react";
+import css from './index.module.css'
 
 type Props = {
 
@@ -7,7 +8,7 @@ type Props = {
 
 export const  SubmitSuccessesMessage: FC<Props> = (): JSX.Element => {
     return (
-        <>Форма отправлена</>
+        <p className={css.successText}>Форма отправлена</p>
     )
 }
 
