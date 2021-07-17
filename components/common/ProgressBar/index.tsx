@@ -9,7 +9,9 @@ type Props = {
 
 const ProgressBar: FC<Props> = ({ skillBoxes }): JSX.Element => {
 	return (
-		<div className={css.skillBox}>
+		<div className={css.skillBox} data-aos="fade-up-right"
+				 data-aos-easing="linear"
+				 data-aos-offset="0">
 			{skillBoxes.map((box) => (
 				<ProgressItem
 					width={100}

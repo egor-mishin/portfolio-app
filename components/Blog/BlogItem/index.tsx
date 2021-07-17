@@ -12,7 +12,9 @@ type Props = {
 }
 export const BlogItem = ({ title, image, textBox, slug, id }:Props) => {
   return (
-    <div className={css.blogItem}>
+    <div className={css.blogItem} data-aos="fade-right"
+         data-aos-easing="ease-in-back"
+         data-aos-offset="0">
       <img
         className={css.blogImg}
         src={image.url}

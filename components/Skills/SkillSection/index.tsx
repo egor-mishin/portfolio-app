@@ -14,8 +14,12 @@ type Props = {
 const SkillSection: FC<Props> = ({ title, skillBoxes, iconsSection }): JSX.Element => {
   return (
   	<>
-			<h2 className={css.title}>{title}</h2>
-			<div className={css.skillSection}>
+			<h2 className={css.title}
+					data-aos="fade-right"
+					data-aos-delay="10"
+					data-aos-easing="linear"
+					data-aos-offset="0">{title}</h2>
+			<div className={css.skillSection} >
 				<ProgressBar skillBoxes={skillBoxes} />
 				<IconsSet iconsSection={iconsSection} />
 			</div>
