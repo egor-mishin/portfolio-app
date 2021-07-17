@@ -9,7 +9,13 @@ type Props = {
 
 const  ProjectImage: FC<Props> = ({url, title}): JSX.Element => {
     return (
-      <img src={url} alt={title} className={css.projectImage}/>
+      <div  data-aos="fade-left"
+            data-aos-delay="15"
+            data-aos-easing="linear"
+            data-aos-offset="0">
+          <img src={url} alt={title} className={css.projectImage}/>
+      </div>
+
     )
 }
 

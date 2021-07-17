@@ -1,3 +1,8 @@
 .langLink{
-    
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin-bottom: .7em;
+}
+.langLink a:hover {
+    color: var(--main-color);
 }

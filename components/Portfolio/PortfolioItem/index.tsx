@@ -14,7 +14,11 @@ type Props = {
 }
 export const PortfolioItem = ({ title, image, textBox, iconsSection, Links }:Props) => {
   return (
-    <div className={css.portfolioItem}>
+    <div className={css.portfolioItem}
+         data-aos="fade-up"
+         data-aos-delay="15"
+         data-aos-easing="linear"
+         data-aos-offset="0">
       <article className={css.textBox}>
         <h3 className={css.portfolioItemTitle}>{title}</h3>
         <p className={css.portfolioItemText}>

@@ -23,7 +23,11 @@ const CurrentProject: FC<Props> = ({image, title,textBox,iconsSection, Links}): 
           <Title>Мой текущий проект</Title>
           <div className={css.currentProjectBox}>
             <ProjectImage url={image.url} title={title}/>
-            <div className={css.projectDescriptionBox}>
+            <div className={css.projectDescriptionBox}
+                 data-aos="fade-right"
+                 data-aos-delay="15"
+                 data-aos-easing="linear"
+                 data-aos-offset="0">
               <article>
                 <h3 className={css.currentProjectTitle}>{title}</h3>
                 <p className={css.currentProjectText}>{textBox}</p>

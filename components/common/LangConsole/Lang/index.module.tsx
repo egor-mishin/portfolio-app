@@ -9,7 +9,10 @@ type Props = {
 
 const  Lang: FC<Props> = ({lang}): JSX.Element => {
     return (
-        <Link href={"#"}>{lang}</Link>
+      <div className={css.langLink}>
+          <Link href={"#"}>{lang}</Link>
+      </div>
+
     )
 }
 

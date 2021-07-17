@@ -10,10 +10,12 @@ type Props = {
   textBox: string
 
 }
-export const BlogItem = ({ title, image, textBox, slug, id }:Props) => {
+export const BlogItem = ({ title, image, textBox, id }:Props) => {
   return (
-    <div className={css.blogItem} data-aos="fade-right"
-         data-aos-easing="ease-in-back"
+    <div className={css.blogItem}
+         data-aos="fade-up"
+         data-aos-delay="15"
+         data-aos-easing="linear"
          data-aos-offset="0">
       <img
         className={css.blogImg}
