@@ -1,5 +1,4 @@
 .portfolioSection {
-    background: var(--light-grey-color);
     position: relative;
     left: 5em;
     transform: rotate(-7deg);
@@ -10,4 +9,20 @@
 .portfolioItemsContainer{
     display: flex;
     justify-content: space-between;
+}
+
+@media (min-width: 320px) {
+    .portfolioItemsContainer{
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1170px) {
+    .portfolioItemsContainer{
+        flex-direction: row;
+    }
+}
+
+.gray{
+    background: var(--light-grey-color);
 }

@@ -3,6 +3,18 @@
     text-align: center;
 }
 
+@media (min-width: 320px) {
+    .iconItem {
+        margin-top: 2em;
+    }
+}
+
+@media (min-width: 1170px) {
+    .iconItem {
+        margin-top: 0;
+    }
+}
+
 .iconItem img{
     height: 40px;
 }

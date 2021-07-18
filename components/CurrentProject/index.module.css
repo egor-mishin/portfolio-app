@@ -5,14 +5,41 @@
 .projectDescriptionBox{
     padding: 2.857em;
     background: var(--light-grey-color);
-    height: 30em;
+
     margin-top: 1em;
     border-radius: 0 2em 2em 0;
 }
 
+@media (min-width: 320px) {
+    .projectDescriptionBox {
+        width: 120%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1170px) {
+    .projectDescriptionBox {
+        height: 30em;
+    }
+}
+
+
 .currentProjectBox{
     display: flex;
     justify-content: space-between;
+}
+
+
+@media (min-width: 320px) {
+    .currentProjectBox {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1170px) {
+    .currentProjectBox {
+        flex-direction: row;
+    }
 }
 
 .currentProjectTitle {

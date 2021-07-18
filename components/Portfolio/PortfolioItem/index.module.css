@@ -1,6 +1,4 @@
 .portfolioItem{
-    width: 39em;
-    height: 46.428em;
     padding: 2.857em;
 
     position: relative;
@@ -11,12 +9,41 @@
     border-radius: 1.428em;
 }
 
+@media (min-width: 320px) {
+    .portfolioItem{
+        width: 24em;
+        height: 100%;
+        margin-left: -8em;
+    }
+}
+
+@media (min-width: 1170px) {
+    .portfolioItem{
+        width: 39em;
+        height: 46.428em;
+        margin-left: 0;
+    }
+}
+
+
 .portfolioImg {
     width: 20em;
 
     position: absolute;
     top: 0;
     right: 0;
+}
+
+@media (min-width: 320px) {
+    .portfolioImg{
+       display: none;
+    }
+}
+
+@media (min-width: 1170px) {
+    .portfolioImg{
+        display: block;
+    }
 }
 
 .portfolioItem:nth-child(2n){

@@ -1,5 +1,4 @@
 .blogItem {
-    width: 39em;
     height: 49.5em;
 
     position: relative;
@@ -9,6 +8,22 @@
     box-shadow: -2px 3px 4px rgba(0, 0, 0, 0.25);
     border-radius: 1.428em;
 }
+
+@media (min-width: 320px) {
+    .blogItem {
+        width: 120%;
+        height: 100%;
+        padding-bottom: 3em;
+    }
+}
+
+@media (min-width: 1170px) {
+    .blogItem {
+        width: 39em;
+        padding-bottom: 0;
+    }
+}
+
 
 .textBox {
     padding: 2em 2.8em 2.8em;

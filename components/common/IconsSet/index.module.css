@@ -14,3 +14,16 @@
 .iconItems{
     display: flex;
 }
+
+@media (min-width: 320px) {
+    .iconItems {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1170px) {
+    .iconItems {
+        flex-direction: row;
+    }
+}
+

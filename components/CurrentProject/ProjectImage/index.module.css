@@ -2,3 +2,18 @@
     width: 38.57em;
     height: 32.857em;
 }
+
+@media (min-width: 320px) {
+    .projectImage{
+        width: 20em;
+        height: 100%;
+        margin: 1em;
+    }
+}
+
+@media (min-width: 1170px) {
+    .projectImage{
+        width: 38.57em;
+        height: 32.857em;
+    }
+}

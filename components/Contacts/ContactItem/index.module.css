@@ -3,6 +3,18 @@
     width: 100%;
 }
 
+@media (min-width: 320px) {
+    .contactLink {
+        margin-bottom: 3em;
+    }
+}
+
+@media (min-width: 1170px) {
+    .contactLink {
+
+    }
+}
+
 .contactLink:hover{
     filter: invert(49%) sepia(7%) saturate(6218%) hue-rotate(318deg) brightness(89%) contrast(109%);
 

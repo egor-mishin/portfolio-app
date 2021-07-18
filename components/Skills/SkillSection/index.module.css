@@ -1,17 +1,41 @@
 .title{
     font-family: var(--head-font);
     color: rgba(199, 199, 211, .5);
-    font-size: 5.071rem;
     text-transform: uppercase;
-    letter-spacing: .24em;
     font-weight: 700;
     margin-bottom: .6em;
     line-height: 80%;
 }
 
+@media (min-width: 320px) {
+    .title {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+}
+
+@media (min-width: 1170px) {
+    .title {
+        font-size: 5.071rem;
+        letter-spacing: .24em;
+    }
+}
+
 .skillSection {
     display: flex;
      margin-bottom: 6.5em;
+}
+
+@media (min-width: 320px) {
+    .skillSection {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1170px) {
+    .skillSection {
+        flex-direction: row;
+    }
 }
 
 .skillSection:last-child{

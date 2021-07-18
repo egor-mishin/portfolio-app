@@ -13,3 +13,27 @@
 .iconItems{
 
 }
+
+@media (min-width: 320px) {
+    .iconItems{
+        margin-bottom: 2em;
+    }
+}
+
+@media (min-width: 1170px) {
+    .iconItems{
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 320px) {
+    .iconsSet{
+       flex-direction: column;
+    }
+}
+
+@media (min-width: 1170px) {
+    .iconsSet{
+        flex-direction: row;
+    }
+}

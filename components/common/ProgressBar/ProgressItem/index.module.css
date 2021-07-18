@@ -34,8 +34,21 @@
 }
 
 .skillBox {
-	width: 60%;
 	margin-right: 8.3em;
+}
+
+@media (min-width: 320px) {
+	.skillBox {
+		width: 100%;
+		margin-bottom: 2em;
+		margin-top: 2em;
+	}
+}
+
+@media (min-width: 1170px) {
+	.skillBox {
+		width: 60%;
+	}
 }
 
 .textBox{

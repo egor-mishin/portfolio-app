@@ -10,9 +10,10 @@ type Props = {
 	portfolioItems: any
 	mainTitle?: string
 	mainButton?: {title: string}
+	onHomePage?: boolean
 }
 
-const PortfolioItems: FC<Props> = ({portfolioItems, mainTitle, mainButton}): JSX.Element => {
+const PortfolioItems: FC<Props> = ({portfolioItems, mainTitle, mainButton, onHomePage}): JSX.Element => {
   return (
   	<section>
 			<div className="container">
@@ -21,9 +22,8 @@ const PortfolioItems: FC<Props> = ({portfolioItems, mainTitle, mainButton}): JSX
 				}
 			</div>
 
-			<section className={css.portfolioSection}>
+			<section className={onHomePage ? `${css.gray} ${css.portfolioSection}` : `${css.portfolioSection}` }>
 				<div className="container">
-
 					<div className="wrapper">
 						<div className={css.portfolioItemsContainer}>
 							{
@@ -35,7 +35,9 @@ const PortfolioItems: FC<Props> = ({portfolioItems, mainTitle, mainButton}): JSX
 				</div>
 			</section>
 			<div className={"buttonContainer"}>
-				<Button url="/portfolio/">{mainButton && mainButton.title}</Button>
+				{
+					mainButton && <Button url="/portfolio/">{mainButton.title}</Button>
+				}
 			</div>
 		</section>
   );

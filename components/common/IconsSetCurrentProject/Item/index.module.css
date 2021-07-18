@@ -3,6 +3,13 @@
     text-align: center;
 }
 
+@media (min-width: 1170px) {
+    .iconItem{
+        flex-direction: row;
+    }
+}
+
+
 .iconItem img{
     height: 40px;
 }
@@ -10,3 +17,4 @@
 .iconTitle {
     font-size: 1.2rem;
 }
+

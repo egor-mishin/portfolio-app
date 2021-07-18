@@ -27,7 +27,7 @@ export default function Home() {
       <main>
         <Skills skillItems={skillItems} />
         <PortfolioItems portfolioItems={portfolioItems} mainTitle={homePage.portfolioSection.title}
-                        mainButton={homePage.portfolioSection.button} />
+                        mainButton={homePage.portfolioSection.button} onHomePage/>
         <CurrentProject {...homePage.currentProjectSection} iconsSection={homePage.IconsSection} />
         <Blog blogItems={blogItems}  mainTitle={homePage.blogSection.title} mainButton={homePage.blogSection.button} />
       </main>
