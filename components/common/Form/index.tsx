@@ -26,7 +26,7 @@ const Form = () => {
         <Input  control={control} name='email' rules={{ required: true }} placeholder={'What is your email?'}/>
         <TextArea control={control} name='projectDetails' rules={{ required: true }} placeholder={'Describe your project'}/>
 
-        <Input type="submit" name="submit" control={control}/>
+        <Input type="submit" name="Get in touch" control={control} value="fdsfdas"/>
         {isSubmitSuccessful && (<><SubmitSuccessesMessage/></> )}
       </form>
     </div>

@@ -2,3 +2,15 @@
     float: right;
     margin-bottom: 2em;
 }
+
+@media (min-width: 1170px) {
+    .closeButton{
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 320px) {
+    .closeButton{
+       margin-right: 5em;
+    }
+}
