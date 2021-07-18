@@ -19,7 +19,9 @@
 
 @media (min-width: 1170px) {
     .projectDescriptionBox {
+        width: 100%;
         height: 30em;
+
     }
 }
 

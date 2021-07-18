@@ -23,6 +23,7 @@
 @media (min-width: 1170px) {
     .iconItems{
         flex-direction: row;
+        margin-bottom: 0;
     }
 }
 
