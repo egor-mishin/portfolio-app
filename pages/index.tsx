@@ -20,7 +20,6 @@ export default function Home() {
   const { skillItems } = data;
   const { blogItems } = data;
   const { portfolioItems } = data;
-  console.log(homePage)
 
   return (
     <Layout>
