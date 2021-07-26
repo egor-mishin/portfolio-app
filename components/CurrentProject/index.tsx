@@ -9,7 +9,7 @@ import { IconItemType, LinkType } from "../../api/type"
 
 
 type Props = {
-  sectionTitile: string
+  sectionTitile?: string
   title?: string
   image?: {url: string}
   textBox?: string
