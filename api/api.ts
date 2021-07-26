@@ -34,6 +34,10 @@ export const HOMEPAGE_QUERY = gql`
                     title
                 }
             }
+
+            skillsSection{
+                title
+            }
             portfolioSection {
                 title
                 button {

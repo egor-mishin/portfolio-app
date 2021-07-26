@@ -7,13 +7,14 @@ import { SkillItem } from "../../api/type";
 
 type Props = {
 	skillItems: SkillItem[]
+	title: string
 }
 
-const Skills: FC<Props> = ({skillItems}): JSX.Element => {
+const Skills: FC<Props> = ({skillItems, title}): JSX.Element => {
 	return (
 		<section className={css.skills}>
 			<div className="container">
-				<Title>Мои навыки.</Title>
+				<Title>{title}</Title>
 
 				{skillItems.map((item) => (
 					<SkillSection title={item.title} skillBoxes={item.skillBoxes} iconsSection={item.iconsSection}/>

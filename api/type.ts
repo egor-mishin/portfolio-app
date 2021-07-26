@@ -28,6 +28,7 @@ export type HomePageType = {
     introSection: IntroSection
     portfolioSection: any
     blogSection: any
+    skillsSection: any
   }
   skillItems: SkillItem[]
   portfolioItems: PortfolioItem[]

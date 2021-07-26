@@ -9,6 +9,7 @@ import { IconItemType, LinkType } from "../../api/type"
 
 
 type Props = {
+  sectionTitile: string
   title?: string
   image?: {url: string}
   textBox?: string
@@ -16,11 +17,11 @@ type Props = {
   Links?: LinkType[]
 }
 
-const CurrentProject: FC<Props> = ({image, title,textBox,iconsSection, Links}): JSX.Element => {
+const CurrentProject: FC<Props> = ({image, title,textBox,iconsSection, Links, sectionTitile}): JSX.Element => {
     return (
       <section className={css.currentProjectSection}>
         <div className="container">
-          <Title>Мой текущий проект</Title>
+          <Title>{sectionTitile}</Title>
           <div className={css.currentProjectBox}>
             <ProjectImage url={image.url} title={title}/>
             <div className={css.projectDescriptionBox}

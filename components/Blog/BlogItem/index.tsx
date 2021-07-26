@@ -27,7 +27,7 @@ export const BlogItem = ({ title, image, textBox, id }:Props) => {
         <p className={css.blogItemText}>
           {textBox}
         </p>
-        <Button url={`/blog/${id}`}>Подробнее</Button>
+        <Button url={`/blog/${id}`}>Read more</Button>
       </article>
     </div>
   )

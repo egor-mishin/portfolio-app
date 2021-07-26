@@ -20,12 +20,13 @@ export default function Home() {
   const { skillItems } = data;
   const { blogItems } = data;
   const { portfolioItems } = data;
+  console.log(homePage)
 
   return (
     <Layout>
       <IntroSection {...homePage.introSection} />
       <main>
-        <Skills skillItems={skillItems} />
+        <Skills skillItems={skillItems}  title={homePage.skillsSection.title }/>
         <PortfolioItems portfolioItems={portfolioItems} mainTitle={homePage.portfolioSection.title}
                         mainButton={homePage.portfolioSection.button} onHomePage/>
         <CurrentProject {...homePage.currentProjectSection} iconsSection={homePage.IconsSection} />
