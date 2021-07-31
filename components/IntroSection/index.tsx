@@ -24,7 +24,9 @@ const IntroSection: FC<Props> = ({ title, image, textBox, button }): JSX.Element
             <ReactMarkdown>
               {title}
             </ReactMarkdown>
-            <p>{textBox}</p>
+            <ReactMarkdown>
+              {textBox}
+            </ReactMarkdown>
           </article>
           {
             button && <div data-aos="fade-up"

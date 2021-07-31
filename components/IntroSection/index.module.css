@@ -1,6 +1,8 @@
 .introSection {
     padding-top: 12em;
+    padding-bottom: 2em;
     background: linear-gradient(-5deg, white 16%, var(--light-grey-color) 0%);
+
 }
 
 .textBox {
@@ -16,6 +18,8 @@
 @media (min-width: 1170px) {
     .textBox{
         width: 50.35em;
+        font-size: 1.2em;
+        line-height: 1.5;
 
     }
 }
@@ -31,6 +35,7 @@
     .avatar{
         width: 372px;
         height: 447px;
+        margin-top: 0;
     }
 }
 
