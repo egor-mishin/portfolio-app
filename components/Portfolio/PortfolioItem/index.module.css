@@ -52,6 +52,7 @@
 
 .portfolioItemText{
     width: 18.57em;
+    min-height: 12em;
     line-height: 1.7;
     font-size: 1.1em;
 }
