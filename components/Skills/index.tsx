@@ -12,7 +12,7 @@ type Props = {
 
 const Skills: FC<Props> = ({skillItems, title}): JSX.Element => {
 	return (
-		<section className={css.skills}>
+		<section className={css.skills} id={"skills"}>
 			<div className="container">
 				<Title>{title}</Title>
 

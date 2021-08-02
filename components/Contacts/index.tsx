@@ -19,7 +19,7 @@ const  Contacts: FC<Props> = (): JSX.Element => {
   const { loading, error, data } = useQuery<ContactsType>(CONTACTS_QUERY);
 
     if (error) return <div>Failed to load</div>
-    if (loading) return <div><Preloader/></div>
+    if (loading) return <div></div>
 
     const { contact } = data
 

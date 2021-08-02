@@ -5,7 +5,6 @@ import Logo from "../components/common/Logo";
 import Footer from "../components/common/Footer";
 import Head from "next/head";
 import Contacts from "../components/Contacts";
-import Modal from "../components/Modal/index.module";
 
 type Props = {}
 
@@ -13,6 +12,13 @@ const Layout: FC<Props> = ({ children }): JSX.Element => {
   return (
     <>
       <Head>
+        <script dangerouslySetInnerHTML={{
+          __html: `function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T93MF2K'`
+        }} />
         <title>Egor Mishin | Front-end developer</title>
         <link rel="icon" href="/favicon.ico" />
 
@@ -30,11 +36,17 @@ const Layout: FC<Props> = ({ children }): JSX.Element => {
         />
 
       </Head>
-      <NavBar />
-      <Logo cssClass="topLogo"/>
-      {children}
-      <Contacts />
-      <Footer />
+      <body>
+      <noscript dangerouslySetInnerHTML={{
+  __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T93MF2K"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+      }}/>
+        <NavBar />
+        <Logo cssClass="topLogo" />
+        {children}
+        <Contacts />
+        <Footer />
+      </body>
     </>
   );
 };
