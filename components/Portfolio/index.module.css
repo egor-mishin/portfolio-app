@@ -1,8 +1,8 @@
 .portfolioSection {
     position: relative;
-    left: 5em;
     transform: rotate(-7deg);
     margin-top: 1em;
+    width: 110%;
 }
 
 
@@ -20,6 +20,7 @@
 @media (min-width: 1170px) {
     .portfolioItemsContainer{
         flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 

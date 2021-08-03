@@ -23,6 +23,10 @@
     }
 }
 
+.blogItem:nth-child(2n){
+    margin: 4em 0;
+}
+
 
 .textBox {
     padding: 2em 2.8em 2.8em;
