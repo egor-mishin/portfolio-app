@@ -7,6 +7,7 @@ import Preloader from "../components/common/Preloader";
 import { Router } from "next/router";
 import Aos from 'aos'
 import { useEffect } from "react";
+import { GTMPageView } from "../utils/gtm";
 
 export default function App({ Component, pageProps }: AppProps) {
 	const apolloClient = useApollo(pageProps.initialApolloState)
@@ -17,6 +18,14 @@ export default function App({ Component, pageProps }: AppProps) {
 
 	useEffect(() =>{
 		Aos.init({ duration: 1500 })
+
+		// Google Tag Manager
+
+		const handleRouteChange = (url: string) => GTMPageView(url);
+		Router.events.on('routeChangeComplete', handleRouteChange);
+		return () => {
+			Router.events.off('routeChangeComplete', handleRouteChange);
+		};
 	})
 
 	return (
