@@ -9,6 +9,10 @@
     width: 50.35em;
 }
 
+.textBox a{
+    color: var(--main-color);
+}
+
 @media (min-width: 320px) {
     .textBox{
         width: 100%;
