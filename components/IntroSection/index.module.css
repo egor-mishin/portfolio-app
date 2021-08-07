@@ -1,7 +1,7 @@
 .introSection {
     padding-top: 12em;
     padding-bottom: 2em;
-    background: linear-gradient(-5deg, white 16%, var(--light-grey-color) 0%);
+    background: linear-gradient(-5deg, white 19%, var(--light-grey-color) 0%);
 
 }
 
@@ -27,14 +27,14 @@
 @media (min-width: 320px) {
     .avatar{
         margin-top: 5em;
-        width: 90%;
+        width: 80%;
     }
 }
 
 @media (min-width: 1170px) {
     .avatar{
-        width: 372px;
-        height: 447px;
+        width: 350px;
+        height: 430px;
         margin-top: 0;
     }
 }
@@ -72,6 +72,7 @@
 @media (min-width: 1170px) {
     .textBox p{
         max-width: 42.357em;
+        font-size: 1.3rem;
     }
 }
 
