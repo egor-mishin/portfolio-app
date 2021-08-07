@@ -25,7 +25,7 @@ export type HomePageType = {
   homePage: {
     currentProjectSection: CurrentProjectSectionType;
     IconsSection: IconItemType[]
-    introSection: IntroSection
+    introSection: IntroSectionType
     portfolioSection: any
     blogSection: any
     skillsSection: any
@@ -37,10 +37,11 @@ export type HomePageType = {
   blogItems: any
 }
 
-type IntroSection = {
+export type IntroSectionType = {
     title: string
-    TextBox: string
+    textBox: string
     image: { url: string }
+    button: {title: string}
 }
 
 export type SkillsType = {

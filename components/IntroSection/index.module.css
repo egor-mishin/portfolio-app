@@ -41,7 +41,7 @@
 
 
 .textBox h1{
-    max-width: 10em;
+    max-width: 11em;
     line-height: 1.2;
 }
 
@@ -71,7 +71,7 @@
 
 @media (min-width: 1170px) {
     .textBox p{
-        max-width: 40.357em;
+        max-width: 42.357em;
     }
 }
 

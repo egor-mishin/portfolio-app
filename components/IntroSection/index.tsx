@@ -3,16 +3,17 @@ import { FC } from "react";
 import ReactMarkdown from "react-markdown";
 import css from "./index.module.css";
 import Button from "../common/Button";
+import { IntroSectionType } from "../../api/type";
 
 
 type Props = {
-  title?: string
-  image?: { url: string }
-  textBox?: string
-  button?: { title: string }
+  title: string
+  image: { url: string }
+  textBox: string
+  button: { title: string }
 }
 
-const IntroSection: FC<Props> = ({ title, image, textBox, button }): JSX.Element => {
+const IntroSection: FC<Props> = ({ title, image, textBox, button } : IntroSectionType ): JSX.Element => {
   return (
     <header className={css.introSection}>
       <div className="container flex">

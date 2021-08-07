@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <IntroSection {...homePage.introSection} />
+      <IntroSection {...homePage.introSection } />
       <main>
         <Skills skillItems={skillItems}  title={homePage.skillsSection.title }/>
         <PortfolioItems portfolioItems={portfolioItems} mainTitle={homePage.portfolioSection.title}

@@ -51,7 +51,7 @@ const Post: FC<Props> = (): JSX.Element => {
 export default Post
 
 
-// <IntroSection {...data.blogPage.introSection}/>
+// <IntroSectionType {...data.blogPage.introSection}/>
 // <main>
 //   <BlogItems blogItems={data.blogItems}/>
 // </main>
